@@ -1,0 +1,271 @@
+/* Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+/* si Uso smoothscrolling de CSS3 en vez de JQuery no puedo definir el top margin para que se vea el navbar*/
+/* html {
+    scroll-behavior: smooth;
+  } */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0.7rem 0;
+}
+
+
+/* Utility Classes */
+
+.container {
+    max-width: 1100px;
+    /* para que se alinee en el medio */
+    margin: auto; 
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: #f44336;
+}
+
+.l-heading {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.m-heading {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.bg-transparent {
+    background-color: rgba(0,0,0,0.4);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #f44336;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #ba000d;
+}
+
+.btn-dark {
+    background: #333;
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    margin: 0.75rem
+}
+
+.button:hover {
+    background: #222;
+}
+
+.py-1 {padding: 1.5rem 0;}
+.py-2 {padding: 2rem 0;}
+.py-3 {padding: 3rem 0;}
+
+.p-1 {padding: 1.5rem;}
+.p-2 {padding: 2rem;}
+.p-3 {padding: 3rem;}
+
+.bg-light {
+    background: #fff;
+    color: #333;
+}
+
+.bg-dark {
+    background: #333;
+    color: #fff;
+}
+
+.bg-primary {
+    background: #ff7961;
+    color: #fff;
+}
+
+.list {
+    margin: 0.5rem 0;
+    list-style: none;
+}
+
+.list li {
+    padding: 0.5rem 0;
+    border-bottom: #444 dotted 1px;
+}
+
+/* Navbar */
+#navbar {
+    /* para usar flexbox */
+    display: flex; 
+    /* Para que siempre se quede arriba con top 0 */
+    position: sticky;
+    top:0;
+    background: #333;
+    color: #fff;
+    /* para que ponga uno a la izq y otro a la der */
+    justify-content: space-between;
+    /* para que siempre este arriba de todo lo demas */
+    z-index: 1;
+    padding: 1rem;
+}
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navbar ul li a {
+    color: #fff;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+    background: #f44336;
+    border-radius: 5px;
+}
+
+/* Showcase */
+#showcase {
+    background: #333 url('../img/gym1.jpg') no-repeat center center/cover;;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+}
+
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    /* Align-items usa el height de su container. Tengo que ponerle height a showcase-content y le pongo 100% del height de su container que es #showcase que ya tiene 100vh */
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    /* overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Section: What we do */
+
+#servicios .items {
+    display: flex   ;
+    padding: 1rem;
+}
+
+#servicios .items .item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
+#servicios .items .item .icon-background {
+    color: #f44336;
+}
+
+
+/* Section: Who we Are */
+
+#who {
+    display: flex;
+}
+
+#who div {
+    flex: 1;
+    flex-basis: 50%;
+}
+
+#who .who-img {
+    background: url(../img/staff.jpg) no-repeat center center/cover;
+}
+
+/* Section: Clients */
+
+#clients .items {
+    display: flex;
+}
+
+#clients .items img {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+/* Section: Contact */
+
+#contact {
+    display: flex;
+}
+
+#contact .map, #contact .contact-form {
+    flex: 1;
+    flex-basis: 50%;
+}
+
+#contact .contact-form .form-row {
+    margin: 0.75rem;
+}
+
+#contact .contact-form label {
+    display: block;
+}
+
+#contact .contact-form input, #contact .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+}
+
+/* GMap */
+
+#map {
+    height: 100%;
+}
+      
+
+
